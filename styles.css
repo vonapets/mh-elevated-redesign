@@ -546,6 +546,37 @@ section.stone:has(> .wrap > .head:first-child){padding-top:var(--s5)}
 .head .lede{padding-top:.55em}
 @media (max-width:980px){.head .lede{padding-top:0}}
 
+/* lead form + legal pages */
+.slot{min-height:0;border:1px solid var(--hair);background:var(--white);display:block;text-align:left;padding:clamp(24px,3vw,40px);gap:0;align-items:stretch;justify-content:flex-start}
+.slot .lead-kicker{font:400 28px var(--serif);display:block;margin-bottom:8px}
+.lead{display:grid;gap:16px;margin-top:20px}
+.lead label{display:grid;gap:6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--text)}
+.lead input[type="text"],.lead input[type="email"],.lead input[type="tel"],.lead textarea{
+  width:100%;border:0;border-bottom:1px solid var(--hair);background:transparent;
+  font:400 16px/1.5 var(--sans);color:var(--text);padding:10px 0;border-radius:0;appearance:none}
+.lead input[type="text"]:focus,.lead input[type="email"]:focus,.lead input[type="tel"]:focus,.lead textarea:focus{
+  outline:none;border-bottom-color:var(--olive)}
+.lead textarea{min-height:120px;resize:vertical}
+.lead-opt,.lead label.lead-opt{display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:start;text-transform:none;letter-spacing:0;font-size:13.5px;line-height:1.55;font-weight:400;color:var(--muted);cursor:pointer}
+.lead-opt input[type="checkbox"]{width:18px;height:18px;margin-top:3px;accent-color:var(--olive);flex:none}
+#enquire,#ar-lead-form,#book{scroll-margin-top:96px}
+.lead .btn{justify-self:start;margin-top:8px;cursor:pointer;border-style:solid}
+.form-legal{margin-top:14px;font-size:14px;letter-spacing:0;text-transform:none;font-weight:400;color:var(--muted)}
+.form-legal a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.lead-thanks{padding:28px 0}
+.lead-thanks strong{font:400 28px var(--serif);display:block}
+.legal-page{padding:var(--s6) 0 var(--s7);background:var(--white)}
+.legal-wrap{max-width:760px;margin:0 auto;padding:0 var(--gut)}
+.legal-page h1{font-size:clamp(36px,4.5vw,64px);margin:8px 0 var(--s3)}
+.legal-page .lede{margin-bottom:var(--s4)}
+.legal-prose h2{font-size:clamp(22px,2.2vw,32px);margin:var(--s5) 0 var(--s2)}
+.legal-prose p,.legal-prose li{font-size:16.5px;line-height:1.75;color:var(--text);max-width:none}
+.legal-prose p+p,.legal-prose ul{margin-top:14px}
+.legal-prose ul{padding-left:1.15em}
+.legal-prose .sms-clause{margin:24px 0;padding:20px 22px;background:var(--stone);font-size:16.5px;line-height:1.75}
+footer .legal-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer .legal a{color:#DDE1D6}
+
 /* IPL / RF how-it-works */
 .how-s{padding:var(--s6) 0}
 .how-grid{display:grid;grid-template-columns:1.1fr .95fr .9fr;gap:var(--s5) 36px;align-items:start}
