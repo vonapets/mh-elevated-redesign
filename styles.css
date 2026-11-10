@@ -525,3 +525,8 @@ footer{padding-bottom:calc(var(--s4) + 72px)}
 @media (prefers-reduced-motion:reduce){.pot{animation:none!important;transition:none!important}.pot:hover{transform:none}}
 @media (max-width:980px){footer .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .pot-dot{margin:0 3px}
+/* v4b: dropdown names only */
+.dd-panel{min-width:0;left:-24px}
+.dd-panel ul{padding:8px 0;white-space:nowrap}
+.dd-panel li a{display:block;padding:9px 24px}
+.dd-panel li a:hover{padding-left:30px}
