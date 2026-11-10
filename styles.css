@@ -545,3 +545,27 @@ section.stone:has(> .wrap > .head:first-child){padding-top:var(--s5)}
 .head{align-items:start}
 .head .lede{padding-top:.55em}
 @media (max-width:980px){.head .lede{padding-top:0}}
+
+/* IPL / RF how-it-works */
+.how-s{padding:var(--s6) 0}
+.how-grid{display:grid;grid-template-columns:1.1fr .95fr .9fr;gap:var(--s5) 36px;align-items:start}
+.how-grid.how-2{grid-template-columns:1.05fr .95fr}
+.how-copy h2{margin-bottom:0}
+.how-copy .lede{margin-top:18px;max-width:42em;font-size:clamp(17px,1.25vw,19px);line-height:1.7}
+.how-steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:18px}
+.how-steps li{padding-left:0;font-size:15.5px;line-height:1.6;color:var(--text)}
+.how-steps strong{display:block;font:500 13px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--olive);margin-bottom:4px}
+.how-for h3{margin:0 0 16px;font-size:clamp(22px,2vw,28px)}
+.how-frame{background:var(--stone);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3.2vw,44px);overflow:hidden}
+.how-frame.arch{border-radius:999px 999px 0 0}
+.how-frame.device img{width:auto;height:auto;max-width:min(100%,637px);max-height:min(100%,836px);object-fit:contain;object-position:center;display:block}
+.how-frame.photo{padding:0}
+.how-frame.photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+@media (max-width:980px){
+  .how-grid,.how-grid.how-2{grid-template-columns:1fr;gap:var(--s4)}
+  .how-frame{max-width:400px;margin:0 auto}
+  .how-frame.photo{max-width:none;aspect-ratio:16/10}
+}
+@media (max-width:620px){
+  .how-s{padding:var(--s5) 0}
+}
