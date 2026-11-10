@@ -68,3 +68,16 @@
     vids.forEach(function(v){vio.observe(v)});
   }
 })();
+(function(){
+  var top=document.querySelector('.top'), bar=top&&top.querySelector('.bar');
+  if(!top)return;
+  var mq=window.matchMedia('(max-width:980px)');
+  var threshold=80;
+  function sync(){
+    if(bar && !top.classList.contains('is-compact') && bar.offsetHeight){threshold=Math.max(56, bar.offsetHeight-8)}
+    top.classList.toggle('is-compact', !mq.matches && window.scrollY>threshold);
+  }
+  sync();
+  window.addEventListener('scroll',sync,{passive:true});
+  window.addEventListener('resize',sync);
+})();
