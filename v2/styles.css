@@ -601,6 +601,10 @@ footer .legal a{color:#DDE1D6}
   .how-s{padding:var(--s5) 0}
 }
 
+/* pot docks at footer */
+footer{padding-bottom:var(--s4)}
+@media (max-width:620px){footer{padding-bottom:var(--s4)}}
+
 /* v2: two-row header with open service list */
 .top .bar{height:72px}
 .top.scrolled .bar{height:56px}

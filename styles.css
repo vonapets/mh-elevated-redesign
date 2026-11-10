@@ -600,3 +600,7 @@ footer .legal a{color:#DDE1D6}
 @media (max-width:620px){
   .how-s{padding:var(--s5) 0}
 }
+
+/* pot docks at footer */
+footer{padding-bottom:var(--s4)}
+@media (max-width:620px){footer{padding-bottom:var(--s4)}}
