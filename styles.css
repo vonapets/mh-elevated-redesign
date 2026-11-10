@@ -542,3 +542,6 @@ footer{padding-bottom:calc(var(--s4) + 72px)}
 section#services,section#all{padding-top:var(--s5);padding-bottom:var(--s6)}
 section.stone:has(> .wrap > .head:first-child){padding-top:var(--s5)}
 @media (max-width:980px){.head{gap:16px;margin-bottom:var(--s3)}section#services,section#all,section.stone:has(> .wrap > .head:first-child){padding-top:var(--s5)}}
+.head{align-items:start}
+.head .lede{padding-top:.55em}
+@media (max-width:980px){.head .lede{padding-top:0}}
