@@ -758,3 +758,30 @@ body{overflow-x:clip}
   .how-s{padding:var(--s5) 0}
 }
 
+/* v2: laser price dropdowns */
+.lz-prices{max-width:760px}
+.lz-acc{border-bottom:1px solid var(--hair)}
+.lz-acc:first-child{border-top:1px solid var(--olive)}
+.lz-sum{width:100%;display:flex;align-items:baseline;gap:12px 18px;padding:20px 0;background:none;border:0;cursor:pointer;color:var(--text);text-align:left;font:inherit}
+.lz-sum:focus-visible{outline:2px solid var(--clay);outline-offset:4px}
+.lz-name{font:400 clamp(22px,2.2vw,28px)/1.15 var(--serif)}
+.lz-from{margin-left:auto;font:400 14.5px/1.4 var(--sans);color:var(--muted);white-space:nowrap}
+.lz-chev{flex:none;width:12px;height:12px;align-self:center;position:relative;margin-left:2px}
+.lz-chev::before{content:"";position:absolute;left:2px;top:2px;width:7px;height:7px;border-right:1.5px solid var(--olive);border-bottom:1.5px solid var(--olive);transform:rotate(45deg);transform-origin:center;transition:transform .45s var(--ease3)}
+.lz-sum[aria-expanded="true"] .lz-chev::before{transform:rotate(225deg);top:5px}
+.lz-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease3)}
+.lz-sum[aria-expanded="true"]+.lz-panel{grid-template-rows:1fr}
+.lz-in{overflow:hidden;min-height:0}
+.lz-in .ptable{padding:4px 0 22px}
+.lz-consult{margin-top:var(--s4);display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.lz-consult p{margin:0;font-size:16.5px;color:var(--muted);max-width:none}
+.pg .lz-prices{margin-top:8px}
+@media (max-width:620px){
+  .lz-sum{flex-wrap:nowrap;gap:8px 10px;padding:18px 0}
+  .lz-from{margin-left:auto;font-size:13px}
+  .lz-consult{margin-top:var(--s3)}
+}
+@media (prefers-reduced-motion:reduce){
+  .lz-panel,.lz-chev::before{transition:none}
+}
+

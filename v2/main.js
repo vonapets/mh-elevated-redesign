@@ -112,3 +112,12 @@
   window.addEventListener('scroll',sync,{passive:true});
   window.addEventListener('resize',sync);
 })();
+
+(function(){
+  document.querySelectorAll('.lz-sum').forEach(function(b){
+    b.addEventListener('click',function(){
+      var open=b.getAttribute('aria-expanded')==='true';
+      b.setAttribute('aria-expanded', open?'false':'true');
+    });
+  });
+})();
