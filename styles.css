@@ -457,3 +457,7 @@ body.locked{overflow:hidden}
 .prow .item .row{margin-bottom:8px}
 @media (max-width:980px){.pmenu{grid-template-columns:1fr;gap:0}}
 .phero.tp{padding-bottom:20px}
+/* v3: hero image spans the full height of the text column, top-aligned */
+.phero.tp .wrap{align-items:stretch}
+.phero.tp .ph{height:auto;min-height:260px;aspect-ratio:auto}
+@media (max-width:980px){.phero.tp .ph{min-height:0;aspect-ratio:16/10}}
