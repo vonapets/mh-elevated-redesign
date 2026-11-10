@@ -32,6 +32,13 @@
   btn&&btn.addEventListener('click',function(){setOpen(true)});
   dr&&dr.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){setOpen(false)})});
   d.addEventListener('keydown',function(e){if(e.key==='Escape'&&dr&&dr.classList.contains('open'))setOpen(false)});
+  // paired service menu: sticky photo follows the service in view
+  d.querySelectorAll('.pmenu').forEach(function(m){
+    var rows=[].slice.call(m.querySelectorAll('.prow')),frames=[].slice.call(m.querySelectorAll('.pf'));
+    function act(r){rows.forEach(function(x){x.classList.toggle('act',x===r)});var f=r.getAttribute('data-f');frames.forEach(function(x){x.classList.toggle('on',x.getAttribute('data-f')===f)})}
+    if(rows.length)act(rows[0]);
+    if('IntersectionObserver' in window){var o=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)act(e.target)})},{rootMargin:'-45% 0px -50% 0px'});rows.forEach(function(r){o.observe(r)})}
+  });
   // accordion
   d.querySelectorAll('.acc-b').forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-expanded',b.getAttribute('aria-expanded')==='true'?'false':'true')})});
 })();

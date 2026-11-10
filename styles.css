@@ -374,3 +374,86 @@ body.locked{overflow:hidden}
   .js [data-reveal],.js [data-stagger]>*,.drawer li,.drawer .d-h,.drawer-panel>.btn{opacity:1!important;transform:none!important}
   .js .mask{clip-path:none!important}.js .mask img,.px{transform:none!important}
 }
+
+/* ===================== v3: services paired with photos ===================== */
+.pmenu{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--s6);align-items:start}
+.pcol{position:sticky;top:100px;height:min(calc(100vh - 140px),720px)}
+.pstick{position:relative;height:100%;overflow:hidden;background:var(--stone)}
+.pf{position:absolute;inset:0;opacity:0;transform:scale(1.06);transition:opacity .9s var(--ease),transform 1.6s var(--ease3)}
+.pf.on{opacity:1;transform:none}
+.pf img{position:absolute;inset:0}
+.js .pstick.mask img{transform:none}
+.plist{border-top:1px solid var(--olive)}
+.prow .item{border-top:0;border-bottom:1px solid var(--hair);padding:var(--s5) 0 var(--s5) 0;transition:padding .6s var(--ease3)}
+.prow .item h3,.prow .item b{transition:color .4s}
+.prow:not(.act) .item h3,.prow:not(.act) .item b{color:#8C8F86}
+.prow.act .item{padding-left:20px;box-shadow:inset 1px 0 0 var(--clay)}
+.pi{display:none}
+.guide{text-align:center;margin-top:var(--s6)}
+.guide a{display:inline-flex;align-items:baseline;gap:16px;text-decoration:none;font:400 clamp(26px,3vw,40px)/1.2 var(--serif);color:var(--olive);padding:0 4px 10px;background:linear-gradient(var(--clay),var(--clay)) 50% 100%/40% 1px no-repeat;transition:background-size .5s var(--ease3)}
+.guide a:hover{background-size:100% 1px}
+.guide i{font-style:normal;color:var(--clay);transition:transform .5s var(--ease3)}
+.guide a:hover i{transform:translateX(8px)}
+@media (max-width:980px){
+  .pmenu{grid-template-columns:1fr;gap:0}
+  .pcol{display:none}
+  .pi{display:block;aspect-ratio:4/3;margin-top:var(--s4);background:var(--stone)}
+  .pi img{position:absolute;inset:0}
+  .prow .item{padding:var(--s4) 0}
+  .prow:not(.act) .item h3,.prow:not(.act) .item b{color:inherit}
+  .prow.act .item{padding-left:0;box-shadow:none}
+  .prow:first-child .pi{margin-top:0}
+}
+
+/* v3: compact treatment heroes (services readable above the fold) */
+.phero.tp{padding:28px 0 20px}
+.phero.tp .wrap{align-items:center;gap:var(--s5)}
+.phero.tp h1{font-size:clamp(38px,3.6vw,54px)}
+.phero.tp .crumb{margin-bottom:12px}
+.phero.tp .lede-wrap{margin-top:14px}
+.phero.tp .lede{font-size:17px;line-height:1.55}
+.phero.tp .by{font-size:14px}
+.phero.tp .ctas{margin-top:20px}
+.phero.tp .btn{min-height:46px}
+.phero.tp .ph{aspect-ratio:auto;height:clamp(220px,32vh,300px)}
+.phero.tp + .menu-s{padding-top:8px}
+.phero.tp + section.stone{padding-top:40px}
+.phero.tp + section .head{margin-bottom:28px}
+.phero.tp + section .head h2{font-size:clamp(30px,3vw,42px)}
+.phero.tp + .menu-s .prow .item{padding:26px 0}
+.phero.tp + .menu-s .prow.act .item{padding-left:20px}
+.prow .item p{font-size:16px}
+.prow .item .best{margin-top:8px}
+.phero.tp ~ section{padding-top:var(--s6);padding-bottom:var(--s6)}
+.phero.tp ~ .finance{padding:var(--s5) 0}
+.phero.tp ~ .menu-s{padding-bottom:var(--s6)}
+.phero.tp + .menu-s{padding-top:8px}
+.phero.tp + section.stone{padding-top:40px}
+
+/* v3: pre and post care fills the width */
+.care-s .head{margin-bottom:var(--s4)}
+.care2{border-top:1px solid var(--olive)}
+.cg{display:grid;grid-template-columns:240px 1fr;gap:var(--s4);padding:var(--s4) 0;border-bottom:1px solid var(--hair)}
+.cg h3{font-size:clamp(24px,2.2vw,30px)}
+.ccs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ccs.n1{grid-template-columns:1fr}
+.cc{background:var(--stone);padding:24px 28px}
+.cc h4{font:500 15px var(--sans);margin-bottom:8px;color:var(--olive)}
+.cc p{font-size:16px;color:var(--muted);max-width:none}
+.care-s .guide{margin-top:var(--s5)}
+@media (max-width:980px){
+  .phero.tp{padding:12px 0 16px}.phero.tp .ph{height:auto;aspect-ratio:16/10}
+  .cg{grid-template-columns:1fr;gap:16px}.ccs{grid-template-columns:1fr}
+  .phero.tp ~ section{padding-top:var(--s5);padding-bottom:var(--s5)}
+}
+/* v3 fold tuning */
+.phero.tp{padding:20px 0 8px}
+.phero.tp h1{font-size:clamp(36px,3.3vw,48px)}
+.phero.tp .crumb{margin-bottom:8px}
+.phero.tp .lede-wrap{margin-top:10px}
+.phero.tp .ctas{margin-top:16px}
+.phero.tp + .menu-s .prow .item{padding:20px 0}
+.pmenu{grid-template-columns:.78fr 1.22fr;gap:var(--s5)}
+.prow .item .row{margin-bottom:8px}
+@media (max-width:980px){.pmenu{grid-template-columns:1fr;gap:0}}
+.phero.tp{padding-bottom:20px}
