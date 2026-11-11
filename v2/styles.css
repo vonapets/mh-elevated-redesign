@@ -709,8 +709,8 @@ body{overflow-x:clip}
 .res-mix.n2{grid-template-columns:repeat(2,1fr);max-width:720px}
 .res-mix.n4{grid-template-columns:repeat(4,1fr)}
 .res-mix .res-card{display:flex;flex-direction:column;min-width:0}
-.res-mix .res-media{aspect-ratio:1/1}
-.res-mix .res-card.photo img{width:100%;height:100%;object-fit:contain;object-position:center;background:#E8E2DB}
+.res-mix .res-media,.res-mix .res-card.vid .res-media{aspect-ratio:3/4}
+.res-mix .res-card.photo img{width:100%;height:100%;object-fit:cover;object-position:center;background:#E8E2DB}
 .res-mix .res-card.vid video{object-fit:cover;object-position:center 30%}
 .res-mix .res-card figcaption{margin-top:auto}
 .res-card{margin:0;background:transparent}
