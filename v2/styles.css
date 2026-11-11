@@ -826,15 +826,15 @@ body{overflow-x:clip}
 
 /* about band: keep the original tray file, shift Madison left, keep her full head in frame */
 .band-meet .band-in img{
-  object-position:72% 34%;
+  object-position:76% 38%;
   transform:scale(1.08);
-  transform-origin:80% 46%;
+  transform-origin:84% 50%;
 }
 @media (max-width:620px){
   .band-meet .band-in img{
     transform:scale(1.08);
-    transform-origin:78% 42%;
-    object-position:70% 32%;
+    transform-origin:82% 46%;
+    object-position:74% 36%;
   }
 }
 
