@@ -682,10 +682,9 @@ body{overflow-x:clip}
 
 /* v2: Instagram results */
 .ig-s{background:var(--stone);padding:var(--s6) 0}
-.res-head{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s4) 48px;flex-wrap:nowrap}
+.res-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s4) 48px;flex-wrap:nowrap}
 .res-s .res-head{margin-bottom:var(--s5)}
-.ig-s h2{font-size:clamp(30px,3.2vw,46px);margin-bottom:12px}
-.ig-s .lede{margin:0}
+.ig-s h2{margin:0}
 .ig-s .res-head .btn{flex:none;margin-left:auto;width:auto}
 .ig-s + .cta{background:var(--white)}
 .res-photos{display:flex;flex-direction:column;gap:16px;margin-bottom:16px}
@@ -760,7 +759,7 @@ body{overflow-x:clip}
 @media (max-width:620px){
   .ig-s{padding:var(--s5) 0}
   .res-head{flex-wrap:wrap}
-  .ig-s .res-head .btn{width:auto;margin-left:auto}
+  .ig-s .res-head .btn{width:auto;margin-left:0}
   .res-s .res-head{margin-bottom:var(--s4)}
   .res-card figcaption{flex-direction:column;align-items:flex-start;gap:4px}
   .how-s{padding:var(--s5) 0}
