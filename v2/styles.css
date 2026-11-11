@@ -811,4 +811,10 @@ body{overflow-x:clip}
 @media (prefers-reduced-motion:reduce){
   .lz-panel,.lz-chev::before{transition:none}
 }
+/* v2: desktop price-menu side image ends with the list, not a tall leftover column */
+.pmenu{align-items:stretch}
+.pcol{height:auto;max-height:min(calc(100vh - 140px),720px);min-height:0}
+.pstick{height:100%}
+.pf img{object-fit:cover}
+
 
