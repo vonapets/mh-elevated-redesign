@@ -706,7 +706,9 @@ body{overflow-x:clip}
 .res-solo .res-card.vid{max-width:none}
 .res-mix{grid-template-columns:repeat(3,1fr);align-items:stretch}
 .res-mix.n2{grid-template-columns:repeat(2,1fr);width:calc((200% - 16px) / 3);max-width:none;margin-inline:auto}
-.res-mix.n4{grid-template-columns:repeat(4,1fr)}
+.res-mix.n4{grid-template-columns:repeat(6,1fr)}
+.res-mix.n4 .res-card{grid-column:span 2}
+.res-mix.n4 .res-card:nth-child(4){grid-column:3/5}
 .res-mix .res-card{display:flex;flex-direction:column;min-width:0}
 .res-mix .res-media,.res-mix .res-card.vid .res-media{aspect-ratio:3/4}
 .res-mix .res-card.photo img{width:100%;height:100%;object-fit:cover;object-position:center;background:#E8E2DB}
@@ -746,7 +748,6 @@ body{overflow-x:clip}
   .res-vids:not(.n1),.res-vids.n2,.res-vids.n3,.res-vids.n4,.res-vids.n6{grid-template-columns:repeat(2,1fr);max-width:none}
   .res-vids.n2{width:auto}
   .res-mix,.res-mix.n3{grid-template-columns:repeat(3,1fr)}
-  .res-mix.n4{grid-template-columns:repeat(2,1fr)}
   .how-grid,.how-grid.how-2{grid-template-columns:1fr;gap:var(--s4)}
   .how-frame{max-width:400px;margin:0 auto}
   .how-frame.photo{max-width:none;aspect-ratio:16/10}
@@ -754,6 +755,7 @@ body{overflow-x:clip}
 @media (max-width:720px){
   .res-mix,.res-mix.n2,.res-mix.n3{grid-template-columns:1fr 1fr}
   .res-mix.n2,.res-vids.n2{width:auto}
+  .res-mix.n4 .res-card,.res-mix.n4 .res-card:nth-child(4){grid-column:auto}
   .res-solo .res-card{width:calc((100% - 16px) / 2)}
 }
 @media (max-width:620px){
@@ -763,11 +765,11 @@ body{overflow-x:clip}
   .res-s .res-head{margin-bottom:var(--s4)}
   .res-card figcaption{flex-direction:column;align-items:flex-start;gap:4px}
   .how-s{padding:var(--s5) 0}
-  .res-vids.n3,.res-mix.n3{
+  .res-vids.n3,.res-mix.n3,.res-mix.n4{
     display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;
     padding-bottom:8px;-webkit-overflow-scrolling:touch
   }
-  .res-vids.n3 .res-card,.res-mix.n3 .res-card{
+  .res-vids.n3 .res-card,.res-mix.n3 .res-card,.res-mix.n4 .res-card{
     flex:0 0 min(76vw,280px);scroll-snap-align:start
   }
   .res-mix.n2,.res-vids.n2{
