@@ -73,6 +73,7 @@
     window.visualViewport.addEventListener('scroll',onScroll,{passive:true});
   }
 })();
+(function(){document.querySelectorAll('.res-car').forEach(function(c){var t=c.querySelector('.res-mix'),p=c.querySelector('.prev'),n=c.querySelector('.next');function st(){var m=t.scrollWidth-t.clientWidth;p.disabled=t.scrollLeft<4;n.disabled=t.scrollLeft>m-4}function step(d){var card=t.querySelector('.res-card');t.scrollBy({left:d*(card.offsetWidth+16),behavior:'smooth'})}p.addEventListener('click',function(){step(-1)});n.addEventListener('click',function(){step(1)});t.addEventListener('scroll',st,{passive:true});window.addEventListener('resize',st);st()})})();
 (function(){
   var d=document,rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var vids=[].slice.call(d.querySelectorAll('.res-card.vid video'));
