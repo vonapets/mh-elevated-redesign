@@ -816,6 +816,7 @@ body{overflow-x:clip}
 }
 @media (prefers-reduced-motion:reduce){
   .lz-panel,.lz-chev::before{transition:none}
+  .pf,.pf.on{transition:none;transform:none}
 }
 /* v2: desktop price-menu side image ends with the list, not a tall leftover column */
 .pmenu{align-items:stretch}
@@ -823,4 +824,48 @@ body{overflow-x:clip}
 .pstick{height:100%}
 .pf img{object-fit:cover}
 
+/* about band: keep the original tray file, shift Madison up and left */
+.band-meet .band-in img{
+  object-position:72% 48%;
+  transform:scale(1.16);
+  transform-origin:80% 72%;
+}
+@media (max-width:620px){
+  .band-meet .band-in img{
+    transform:scale(1.14);
+    transform-origin:78% 68%;
+    object-position:70% 44%;
+  }
+}
+
+/* values header: subtitle matches the serif display heading */
+.vals-head .lede{
+  margin:0;
+  padding-top:0;
+  max-width:none;
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(30px,3vw,42px);
+  line-height:1.08;
+  letter-spacing:-.01em;
+  color:var(--text);
+}
+@media (max-width:980px){
+  .vals-head{gap:8px}
+}
+
+/* closing "Can't wait to meet you" book button, about 1.4x */
+.cta-meet .btn{
+  min-height:73px;
+  padding:0 42px;
+  font-size:21px;
+}
+@media (max-width:620px){
+  .cta-meet .wrap{gap:20px}
+  .cta-meet .btn{
+    min-height:64px;
+    padding:0 34px;
+    font-size:18px;
+  }
+}
 
