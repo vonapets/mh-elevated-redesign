@@ -605,6 +605,10 @@ footer .legal a{color:#DDE1D6}
 footer{padding-bottom:var(--s4)}
 @media (max-width:620px){footer{padding-bottom:var(--s4)}}
 
+/* v2: keep price tokens like $12 / unit on one line */
+.item .row h3{flex:0 1 auto;min-width:0}
+.item .row b{flex:none;white-space:nowrap}
+
 /* v2: two-row header with open service list */
 .top .bar{height:72px}
 .top.scrolled .bar{height:56px}
